@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count Page</title>
+</head>
+<body>
+    <a href="{% url 'home' %}">Count More</a>
+    <h3>Your Statement is: </h3>
+    {{ fulltext }}
+
+    <h3>Number of words in your text is : {{ count }}</h3>
+
+    {% for word, counttotal in dict %}
+      {{ word }}:{{ counttotal }}
+       <br/>
+    {% endfor %}
+</body>
+</html>
